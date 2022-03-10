@@ -1,4 +1,4 @@
-[
+const lists = [
   {
     name: 'cat',
     prefix: 'fa-',
