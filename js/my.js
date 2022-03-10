@@ -17,7 +17,7 @@ const selettore = document.getElementById('selettore');
 selettore.addEventListener('change', function () {
   const iconsTypeSelected = this.value;
   console.log(this.value);
-  if (iconsTypeSelected != 'tutti') {
+  if (iconsTypeSelected != 'Tutti') {
     const filteredIcons = lists.filter((iconArgument) => {
       if (iconArgument.type == iconsTypeSelected) {
         return true;
@@ -25,6 +25,6 @@ selettore.addEventListener('change', function () {
     });
     insertIcons(filteredIcons, container);
   } else {
-    insertIcons(icons, container);
+    insertIcons(lists, container);
   }
 });
