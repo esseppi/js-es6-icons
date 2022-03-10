@@ -1,12 +1,12 @@
 const container = document.getElementById('container');
-container.className = 'd-flex row row-cols-4';
+container.className = 'd-flex row row-cols-4 justify-content-center';
 function insertIcons(iconsArray, iconsCreationContainer) {
   iconsCreationContainer.innerHTML = '';
   iconsArray.forEach((element) => {
     const card = document.createElement('div');
-    card.className = 'card col text-center my-4';
+    card.className = 'card col text-center m-4';
     card.innerHTML = `
-      <i class="${element.family} ${element.prefix}${element.name}" style="color: ${element.color}"></i>
+      <i class="${element.family} ${element.prefix}${element.name} my-2" style="color: ${element.color}"></i>
       <span>${element.name}</span>
     `;
     iconsCreationContainer.append(card);
